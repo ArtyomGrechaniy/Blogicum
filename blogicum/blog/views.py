@@ -42,9 +42,6 @@ posts = [
                 укутывал их, чтобы не испортились от дождя.''',
     },
 ]
- 
- 
-
 
 
 def post_detail(request, id):
@@ -55,13 +52,15 @@ def post_detail(request, id):
 
 def category_posts(request, category_slug):
     template = 'blog/category.html'
-    category_posts = [post for post in posts if post['category'] == category_slug]
+    category_posts = [post for post in posts 
+                      if post['category'] == category_slug]
     category_posts = reversed(category_posts)
     context = {
-        'category_slug' : category_slug,
-        'category_posts' : category_posts
+        'category_slug': category_slug,
+        'category_posts': category_posts
     }
     return render(request, template, context)
+
 
 def index(request):
     template = 'blog/index.html'
