@@ -147,7 +147,7 @@ dmypy.json
 
 # папки со статикой и медиа
 media/
-django_sprint1-main/blogicum/static
+blogicum/static
 
 # Testing
 build_tests/
